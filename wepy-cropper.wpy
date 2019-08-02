@@ -392,6 +392,7 @@
           //     cropperMovableItems: cropperMovableItemsCopy
           // })
         }, 100)
+	this.$emit('wepyCropperRotate', { rotateDegree });
 
       },
 
