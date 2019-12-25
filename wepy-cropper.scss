@@ -17,6 +17,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  bottom: 0;
   width: 100%;
 }
 
@@ -146,6 +147,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  bottom: 0;
 }
 
 /* opacity:0隐藏，如果想看就设置为1，只能在测试机能看到，真机上canvas层级在最高层 */
