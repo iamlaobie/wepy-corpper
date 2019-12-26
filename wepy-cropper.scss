@@ -1,3 +1,26 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 1317816 */
+  src: url('//at.alicdn.com/t/font_1317816_ujqtfcsh2j.eot');
+  src: url('//at.alicdn.com/t/font_1317816_ujqtfcsh2j.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1317816_ujqtfcsh2j.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1317816_ujqtfcsh2j.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1317816_ujqtfcsh2j.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1317816_ujqtfcsh2j.svg#iconfont') format('svg');
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:30rpx;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    margin-right: 3px;
+}
+
+// .rotate_button .iconfont{
+//   transform: rotate(90deg);
+// }
+
 .cropper_main_container {
   position: fixed;
   left: 0;
@@ -43,7 +66,10 @@
   -ms-flex-align: center;
   align-items: center;
 }
-
+.isX{
+  height: 60px;
+  padding-bottom: 10px;
+}
 .cropper_toolbar .button_item {
   /* width: 70px; */
   float: left;
@@ -53,6 +79,11 @@
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  display: flex;
+  align-content: center;
+  font-size: 30rpx;
+  justify-content: center;
+
 }
 
 /* cancel_button */
@@ -148,6 +179,7 @@
   left: 0;
   top: 0;
   bottom: 0;
+  right:0;
 }
 
 /* opacity:0隐藏，如果想看就设置为1，只能在测试机能看到，真机上canvas层级在最高层 */
@@ -159,13 +191,29 @@
   background: white;
   border-radius: 50%;
 }
-
+@keyframes fadeio {
+  /*设置内容由显示变为隐藏*/
+  0% {
+      opacity: 0;
+  }
+  80% {
+      opacity: 0.6;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+.cropper_main_container .rotate{
+  animation: fadeio .7s linear ;
+}
 .cropper_canvas_container .canvas {
   position: absolute;
   left: 0;
   top: 0;
   /* opacity: 0; */
 }
+
+  
 
 /* 因为display:none在真机上会造成无法截取图片，所以这里是通过移到显示区域外来达到隐藏效果的 */
 
